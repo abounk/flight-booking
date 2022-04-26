@@ -5,7 +5,7 @@ from sqlalchemy.orm import declarative_base, relationship
 Base = declarative_base()
 
 
-class FlightBookingModel(Base):
+class FlightBooking(Base):
     """FlightBooking model, contian informnation for a flight booking.
 
     Args:
@@ -27,7 +27,7 @@ class FlightBookingModel(Base):
     destination = Column(Text, nullable=False)
     boarding_date = Column(DateTime, nullable=False)
 
-    user = relationship("UserModel", back_populates="flight_booking")
+    user = relationship("User", back_populates="flight_booking")
 
     def __repr__(self) -> str:
         return f"FlightBooking (id={self.id}, flight_class={self.flight_class}, seat_number={self.seat_number},\

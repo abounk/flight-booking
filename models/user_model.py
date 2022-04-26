@@ -5,7 +5,7 @@ from sqlalchemy.orm import declarative_base, relationship
 Base = declarative_base()
 
 
-class UserModel(Base):
+class User(Base):
     """User model, contains information for a user.
 
     Args:
@@ -22,7 +22,7 @@ class UserModel(Base):
     age = Column(Integer, nullable=False)
 
     flight_booking = relationship(
-        "FlightBookingModel", back_populates="user", cascade="all, delete-orphan")
+        "FlightBooking", back_populates="user", cascade="all, delete-orphan")
 
     def __repr__(self) -> str:
         return f"User (id={self.id!r}, firstname={self.firstname!r}, lastname={self.lastname!r}, age={self.age!r})"
