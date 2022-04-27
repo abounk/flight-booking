@@ -21,7 +21,7 @@ class FlightBooking(Base):
 
     id = Column(Integer, primary_key=True)
     flight_class = Column(Text, nullable=False)
-    seat_number = Column(Text, nullable=False)
+    seat = Column(Text, nullable=False)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     current = Column(Text, nullable=False)
     destination = Column(Text, nullable=False)
@@ -30,5 +30,5 @@ class FlightBooking(Base):
     user = relationship("User", back_populates="flight_booking")
 
     def __repr__(self) -> str:
-        return f"FlightBooking (id={self.id}, flight_class={self.flight_class}, seat_number={self.seat_number},\
+        return f"FlightBooking (id={self.id}, flight_class={self.flight_class}, seat={self.seat},\
  user_id={self.user_id}, current={self.current}, destination={self.destination}, boarding_date={self.boarding_date})"
