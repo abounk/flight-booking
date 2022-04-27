@@ -7,7 +7,7 @@ from utils.dao.user_dao import UserDao
 
 class FlightBookingDb:
 
-    def __init__(self, connection_string: str = "sqlite:///sample.db") -> None:
+    def __init__(self, connection_string: str = "sqlite:///flight.db") -> None:
         db_engine = create_engine(connection_string)
         self.__db_session = sessionmaker(bind=db_engine)()
 
