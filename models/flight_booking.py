@@ -1,8 +1,8 @@
-from sqlalchemy import Column, Integer, Text, DateTime
+from sqlalchemy import Column, Integer, Text
 from sqlalchemy import ForeignKey
-from sqlalchemy.orm import declarative_base, relationship
+from sqlalchemy.orm import relationship
 
-Base = declarative_base()
+from models.base import Base
 
 
 class FlightBooking(Base):
@@ -25,10 +25,10 @@ class FlightBooking(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     current = Column(Text, nullable=False)
     destination = Column(Text, nullable=False)
-    boarding_date = Column(DateTime, nullable=False)
+    boarding_date = Column(Text, nullable=False)
 
     user = relationship("User", back_populates="flight_booking")
 
     def __repr__(self) -> str:
         return f"FlightBooking (id={self.id}, flight_class={self.flight_class}, seat_number={self.seat_number},\
-            user_id={self.user_id}, current={self.current}, destination={self.destination}, boarding_date={self.boarding_date})"
+ user_id={self.user_id}, current={self.current}, destination={self.destination}, boarding_date={self.boarding_date})"

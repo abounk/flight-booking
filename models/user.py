@@ -1,8 +1,8 @@
 from tkinter import CASCADE
 from sqlalchemy import Column, Integer, Text
-from sqlalchemy.orm import declarative_base, relationship
+from sqlalchemy.orm import relationship
 
-Base = declarative_base()
+from models.base import Base
 
 
 class User(Base):
