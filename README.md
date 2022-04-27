@@ -34,7 +34,7 @@ The flight booking database contains the initials data of the users and bookings
 ## Project Description
 
 * Domain model
-* ![png](https://user-images.githubusercontent.com/73059738/165601241-bfd296d1-a660-4b6c-b4f4-1aaee9843e2c.png)
+![png](https://user-images.githubusercontent.com/73059738/165601241-bfd296d1-a660-4b6c-b4f4-1aaee9843e2c.png)
 
 * Package Diagram
 ![package_diagram](https://user-images.githubusercontent.com/73059738/165601844-e7037b1c-69ed-4f9c-b77f-71153cd0be73.png)
