@@ -13,7 +13,7 @@ onboarding_date = datetime.now() + timedelta(days=1)
 
 date_time_obj = onboarding_date.strftime('%d/%m/%Y %H:%M:%S')
 
-booking = FlightBooking(flight_class="Bussiness", seat_number=111,
+booking = FlightBooking(flight_class="Bussiness", seat_number="B-111",
                         user_id=11, current="Chiangmai", destination="Bangkok", boarding_date=date_time_obj)
 
 flight_booking_db.booking().create_booking(booking)

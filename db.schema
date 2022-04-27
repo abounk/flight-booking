@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS flight_bookings (
     id            INTEGER PRIMARY KEY AUTOINCREMENT,
     flight_class  TEXT NOT NULL,
-    seat_number   INTEGER NOT NULL,
+    seat_number   TEXT NOT NULL,
     user_id       INTEGER NOT NULL,
     current       TEXT NOT NULL,
     destination   TEXT NOT NULL,

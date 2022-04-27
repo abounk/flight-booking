@@ -11,7 +11,7 @@ class FlightBooking(Base):
     Args:
         id (int): ID of the booking.
         flight_class (str): Class of the flight (eg. First-class, Business, Economy).
-        seat_number (int): Seat number.
+        seat_number (str): Seat number.
         user_id (int): ID of the user.
         current (str): Starting country.
         destination (str): Destination country.
@@ -21,7 +21,7 @@ class FlightBooking(Base):
 
     id = Column(Integer, primary_key=True)
     flight_class = Column(Text, nullable=False)
-    seat_number = Column(Integer, nullable=False)
+    seat_number = Column(Text, nullable=False)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     current = Column(Text, nullable=False)
     destination = Column(Text, nullable=False)
