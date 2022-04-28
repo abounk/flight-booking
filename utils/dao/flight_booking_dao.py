@@ -1,4 +1,5 @@
 from typing import List, Any
+
 from sqlalchemy.orm.query import Query
 from utils.dao.dao_base import Dao
 from models.flight_booking import FlightBooking
@@ -37,7 +38,7 @@ class FlightBookingDao(Dao):
         Returns:
             List[FlightBooking]: All bookings of a specified user.
         """
-        booking_list = self.__session.query(FlightBooking).filter(
+        booking_list = self.session.query(FlightBooking).filter(
             FlightBooking.user_id == user_id).all()
         return booking_list
 
@@ -59,4 +60,17 @@ class FlightBookingDao(Dao):
             booking (FlightBooking): Instance of FlightBooking.
         """
         self.session.add(booking)
+        self.session.commit()
+
+    def update_booking(self, id: int, value) -> None:
+        """Update a booking in the database
+
+        Args:
+            id (int): Booking ID.
+            value (Dict): {column_name: new_value}.
+        """
+        booking = self.session.query(
+            FlightBooking).filter(FlightBooking.id == id)
+        booking.update(values=value)
+
         self.session.commit()
