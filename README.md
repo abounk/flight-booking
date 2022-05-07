@@ -30,15 +30,9 @@ The flight booking database contains the initials data of the users and bookings
   ```python
   python main.py
   ```
+## Documentation
+- [Flight Booking APIS documentation](https://abounk.github.io/flight-booking/#/document)
 
-## Project Description
+## UML Diagrams
+- [UML Diagrams](https://abounk.github.io/flight-booking/#/?id=project-description)
 
-* Domain model
-![png](https://user-images.githubusercontent.com/73059738/165601241-bfd296d1-a660-4b6c-b4f4-1aaee9843e2c.png)
-
-* Package Diagram
-![package_diagram](https://user-images.githubusercontent.com/73059738/165601844-e7037b1c-69ed-4f9c-b77f-71153cd0be73.png)
-
-
-* Class Diagram
-![class_diagram](https://user-images.githubusercontent.com/73059738/165601425-4023bb82-503e-47cb-a3e0-19633fd1bcd1.png)
