@@ -2,7 +2,9 @@
 
 ## Overview
 
-The API documents of Flight Booking web application. This documentation will provide API of our flight booking service.
+The API documents of Flight Booking web application. This documentation will provide API of our flight booking service. \
+\
+Note: This template is from [GarnBarn](https://garnbarn.github.io/garnbarn-backend/#/api) ISP Project.
 
 ## Booking APIs
 
